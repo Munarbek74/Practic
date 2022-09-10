@@ -49,6 +49,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void allUsers() {
-        System.out.println("Бардык колдонуучуларды алуу");
+        System.out.println();
     }
 }

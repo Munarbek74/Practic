@@ -15,15 +15,7 @@ public class User {
         this.gender = gender;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", gender=" + gender +
-                '}';
-    }
+
 
     public int getId() {
         return id;
@@ -57,7 +49,13 @@ public class User {
         this.gender = gender;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", gender=" + gender +
+                '}';
+    }
 }
