@@ -2,29 +2,26 @@ package com.company.dao;
 
 import com.company.model.User;
 
-import java.util.Arrays;
 
 public class UserDao {
-    private User[] users;
+    private User users;
 
-    public UserDao(User[] users) {
+    public UserDao(User users) {
         this.users = users;
     }
-    public UserDao() {}
 
-
-    public User[] getUsers() {
+    public User getUsers() {
         return users;
     }
 
-    public void setUsers(User[] users) {
-                this.users = users;
+    public void setUsers() {
+        this.users = users;
     }
 
     @Override
     public String toString() {
         return "UserDao{" +
-                "users=" + Arrays.toString(users) +
+                "users=" + users +
                 '}';
     }
 }

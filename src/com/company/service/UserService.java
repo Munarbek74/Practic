@@ -1,6 +1,7 @@
 package com.company.service;
 
 import com.company.dao.UserDao;
+import com.company.model.User;
 
 import java.util.ArrayList;
 import java.util.Arrays;

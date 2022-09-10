@@ -1,7 +1,11 @@
 package com.company.service.impl;
 
+import com.company.Gender;
 import com.company.dao.UserDao;
+import com.company.model.User;
 import com.company.service.UserService;
+
+import java.util.ArrayList;
 
 public class UserServiceImpl implements UserService {
 
@@ -32,14 +36,32 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void findId(int a) {
-        UserDao userDao = new UserDao();
-        for (int i = 0; i < userDao.getUsers().length; i++) {
-            if (userDao.equals(1)) {
-                System.out.println(userDao);
+
+            User user1= new User(1, "Асанов У", 21, Gender.MALE);
+        User user2 = new User(2, "Усонова А", 25, Gender.FEMALE);
+        User user3 = new User(3, "Тешебаев Б.", 19, Gender.MALE);
+        UserDao userDao = new UserDao(user1);
+        UserDao userDao1 = new UserDao(user2);
+        UserDao userDao2 = new UserDao(user3);
+        ArrayList<UserDao> strings = new ArrayList<>();
+        strings.add(0,userDao);
+        strings.add(1,userDao1);
+        strings.add(2,userDao2);
+
+        for (int i = 0; i < strings.size(); i++) {
+
+                if (strings.get(i).getUsers().getId()==a) {
+
+                    System.out.println(strings.get(i));
+
+            }
             }
 
-        }
     }
+
+
+
+
 
     @Override
     public void delId(int b) {
